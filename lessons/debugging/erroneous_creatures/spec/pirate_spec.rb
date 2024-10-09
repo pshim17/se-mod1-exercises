@@ -53,7 +53,9 @@ RSpec.describe Pirate do
 
     pirate.commit_heinous_act
 
-    expect(pirate.cursed?).to eq(true)
+    # require "pry"; binding.pry # take a look at instances in pry
+
+    expect(pirate.cursed?).to eq(false)
   end
 
   it "it_speaks_with_an_arrrr" do
