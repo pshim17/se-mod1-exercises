@@ -14,6 +14,10 @@ class Werewolf
     @werewolf = false
   end
 
+  def location
+    @location
+  end
+
   def human?
     if @change.odd?
       false
@@ -34,4 +38,7 @@ class Werewolf
     end
   end
 
+  def respond_to?
+    :change!
+  end
 end
