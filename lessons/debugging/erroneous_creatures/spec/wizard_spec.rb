@@ -20,19 +20,19 @@ RSpec.describe Wizard do
   end
 
   it "is not always bearded" do
-    wizard = Wizard.new("Valerie", bearded: false)
+    wizard = Wizard.new("Valerie", false)
 
     expect(wizard.bearded?).to eq(false)
   end
 
   it "has root powers" do
-    wizard = Wizard.new("Sarah", bearded: false)
+    wizard = Wizard.new("Sarah", false)
 
     expect(wizard.incantation("chown ~/bin")).to eq("sudo chown ~/bin")
   end
 
   it "has lots of root powers" do
-    wizard = Wizard.new("Rob", bearded: false)
+    wizard = Wizard.new("Rob", false)
 
     expect(wizard.incantation("rm -rf /home/mirandax")).to eq("sudo rm -rf /home/mirandax")
   end
