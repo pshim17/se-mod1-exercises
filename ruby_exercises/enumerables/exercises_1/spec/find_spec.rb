@@ -8,23 +8,30 @@ RSpec.describe 'find test' do
     expect(found).to eq("unicorn")
   end
 
-  xit 'no waldo' do
+  it 'no waldo' do
     words = ["scarf", "sandcastle", "flag", "pretzel", "crow", "key"]
     found = words.find do |word|
+      word == "waldo"
       # Your code goes here
     end
     expect(found).to eq(nil)
   end
 
-  xit 'found waldo' do
+  it 'found waldo' do
     words = ["noise", "dog", "fair", "house", "waldo", "bucket", "fish"]
     # Your code goes here
+      found = words.find do |word|
+        word == "waldo"
+      end
     expect(found).to eq("waldo")
   end
 
-  xit 'no three letter words' do
+  it 'no three letter words' do
     words = ["piglet", "porridge", "bear", "blueberry"]
     # Your code goes here
+    found = words.find do |word|
+      word.length == 3
+    end
     expect(found).to eq(nil)
   end
 
