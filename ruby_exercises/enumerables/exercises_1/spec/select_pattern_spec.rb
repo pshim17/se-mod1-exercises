@@ -12,7 +12,7 @@ RSpec.describe 'select pattern' do
   it 'picks odd numbers' do
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     odds = []
-    numbers.select do |number|
+    numbers.each do |number|
       # Your code goes here
       if number.odd?
         odds << number
@@ -25,7 +25,7 @@ RSpec.describe 'select pattern' do
     words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"]
     selected = []
     # Your code goes here
-    words.select do |word|
+    words.each do |word|
       if word.length == 3
         selected << word
       end
@@ -37,7 +37,7 @@ RSpec.describe 'select pattern' do
     words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"]
     # Your code goes here
     selected = []
-    words.select do |word|
+    words.each do |word|
       if word.length > 3
         selected << word
       end
@@ -49,7 +49,7 @@ RSpec.describe 'select pattern' do
     words = ["are", "you", "strike", "thinking", "belt", "piece", "warble", "sing", "pipe"]
     # Your code goes here
     selected = []
-    words.select do |word|
+    words.each do |word|
       if word.end_with?("e")
         selected << word
       end
@@ -61,7 +61,7 @@ RSpec.describe 'select pattern' do
     words = ["bring", "finger", "drought", "singing", "bingo", "purposeful"]
     # Your code goes here
     selected = []
-    words.select do |word|
+    words.each do |word|
       if word.end_with?("ing")
         selected << word
       end
@@ -73,7 +73,7 @@ RSpec.describe 'select pattern' do
     words = ["four", "red", "five", "blue", "pizza", "purple"]
     # Your code goes here
     selected = []
-    words.select do |word|
+    words.each do |word|
       if word.include?("e")
         selected << word
       end
@@ -85,7 +85,7 @@ RSpec.describe 'select pattern' do
     animals = ["tyrannosaurus", "narwhal", "eel", "achillesaurus", "qingxiusaurus"]
     # Your code goes here
     dinosaurs = []
-    animals.select do |animal|
+    animals.each do |animal|
       if animal.end_with?("saurus")
         dinosaurs << animal
       end
@@ -97,7 +97,7 @@ RSpec.describe 'select pattern' do
     numbers = [3, 1.4, 3.5, 2, 4.9, 9.1, 8.0]
     # Your code goes here
     floats = []
-    numbers.select do |number|
+    numbers.each do |number|
       if number.kind_of? Float
         floats << number 
       end
@@ -109,7 +109,7 @@ RSpec.describe 'select pattern' do
     elements = ["CAT", ["dog"], 23, [56, 3, 8], "AIMLESS", 43, "butter"]
     # Your code goes here
     arrays = []
-    elements.select do |element|
+    elements.each do |element|
       if element.kind_of? Array
         arrays << element
       end
@@ -121,7 +121,7 @@ RSpec.describe 'select pattern' do
     elements = ["cat", {:dog=>"fido"}, 23, {:stuff=>"things"}, "aimless", 43]
     # Your code goes here
     hashes = []
-    elements.select do |element|
+    elements.each do |element|
       if element.kind_of? Hash
         hashes << element
       end
