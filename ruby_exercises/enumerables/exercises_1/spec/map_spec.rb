@@ -19,10 +19,9 @@ RSpec.describe 'map' do
 
   it 'squares' do
     numbers = [1, 2, 3, 4, 5]
-    squares = []
     # Your code goes here
-    numbers.map do |number|
-      squares << number ** 2
+    squares = numbers.map do |number|
+      number ** 2
     end
 
     expect(squares).to eq([1, 4, 9, 16, 25])
@@ -31,9 +30,8 @@ RSpec.describe 'map' do
   it 'lengths' do
     names = ["alice", "bob", "charlie", "david", "eve"]
     # Your code goes here
-    lengths = []
-    names.map do |name|
-      lengths << name.length
+    lengths = names.map do |name|
+      name.length
     end
     
     expect(lengths).to eq([5, 3, 7, 5, 3])
@@ -42,9 +40,8 @@ RSpec.describe 'map' do
   it 'normalize zip codes' do
     numbers = [234, 10, 9119, 38881]
     # Your code goes here
-    zip_codes = []
-    numbers.map do |num|
-      zip_codes << num.to_s.rjust(5, "0")
+    zip_codes = numbers.map do |num|
+      num.to_s.rjust(5, "0")
     end
     expect(zip_codes).to eq(["00234", "00010", "09119", "38881"])
   end
@@ -52,9 +49,8 @@ RSpec.describe 'map' do
   it 'backwards' do
     names = ["alice", "bob", "charlie", "david", "eve"]
     # Your code goes here
-    backwards = []
-    names.map do |name|
-      backwards << name.reverse
+    backwards = names.map do |name|
+      name.reverse
     end
     expect(backwards).to eq(["ecila", "bob", "eilrahc", "divad", "eve"])
   end
@@ -62,9 +58,8 @@ RSpec.describe 'map' do
   it 'words with no vowels' do
     words = ["green", "sheep", "travel", "least", "boat"]
     # Your code goes here
-    without_vowels = []
-    words.map do |word|
-      without_vowels << word.gsub(/[aeiou]/, "")
+    without_vowels = words.map do |word|
+      word.gsub(/[aeiou]/, "")
     end
     expect(without_vowels).to eq(["grn", "shp", "trvl", "lst", "bt"])
   end
@@ -72,9 +67,8 @@ RSpec.describe 'map' do
   it 'trims last letter' do
     animals = ["dog", "cat", "mouse", "frog", "platypus"]
     # Your code goes here
-    trimmed = []
-    animals.each do |animal|
-      trimmed << animal.chop()
+    trimmed = animals.map do |animal|
+      animal.chop
     end
     expect(trimmed).to eq(["do", "ca", "mous", "fro", "platypu"])
   end

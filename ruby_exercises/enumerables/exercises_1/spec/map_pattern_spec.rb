@@ -2,9 +2,8 @@ RSpec.describe 'map pattern' do
 
   it 'capitalizes' do
     names = ["alice", "bob", "charlie"]
-    capitalized_names = []
-    names.each do |name|
-      capitalized_names << name.capitalize
+    capitalized_names = names.each do |name|
+       name.capitalize
     end
     expect(capitalized_names).to eq(["Alice", "Bob", "Charlie"])
   end
